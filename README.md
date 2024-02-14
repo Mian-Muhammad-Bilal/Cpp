@@ -11,6 +11,10 @@ Throughout my journey, I've learned fundamental concepts and advanced topics, in
 - Object-Oriented Programming
 - Data Structures and Algorithms
 
+## Programming Fundamentals(https://github.com/Mian-Muhammad-Bilal/Cpp/tree/main/Programing%20Fundamentals): Uploaded Programming Fundamentals in C++
+- This repository includes practice exercises, operations, arrays, loops, functions, exams, and the Car Parking Management project. It covers foundational aspects of C++ from the first semester, providing a solid base for further exploration and learning.
+
+
 ## Semester Projects and Assessments
 Explore the various projects and assessments that mark different milestones in my journey.
 - [Semester 1 Projects and Assessments](link-to-semester1): Collection of projects and assessments from the first semester.

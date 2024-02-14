@@ -12,7 +12,6 @@ Throughout my journey, I've learned fundamental concepts and advanced topics, in
 - Data Structures and Algorithms
 
 ## Programming Fundamentals:
-- Uploaded Programming Fundamentals in C++
 - This repository includes practice exercises, operations, arrays, loops, functions, exams, and the Car Parking Management project. It covers foundational aspects of C++ from the first semester, providing a solid base for further exploration and learning.
 
 

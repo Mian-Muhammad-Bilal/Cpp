@@ -1,15 +1,12 @@
 #include <iostream>
-#include <string.h>
+#include <cstring>
 #include <fstream>
-#include <stdio.h>
-// #include <conio.h>
-#include <stdlib.h>
+#include <string>
 
 using namespace std;
 
 class Book
 {
-	// string book_name;
 	char book_name[25];
 	float book_price;
 	int book_id;
@@ -17,7 +14,7 @@ class Book
 public:
 	Book()
 	{
-		strcpy_s(book_name, "blank");
+		strcpy(book_name, "blank");
 		book_price = 0;
 		book_id = 0;
 	}
@@ -31,15 +28,14 @@ public:
 
 	void inputData()
 	{
-		// int b_id; string b_name; float b_price;
-		cout << "Enter Book ID: " << endl;
+		cout << "Enter Book ID: ";
 		cin >> book_id;
 
-		cout << "Enter Book Name: " << endl;
+		cout << "Enter Book Name: ";
 		cin.ignore();
 		cin.getline(book_name, 24);
 
-		cout << "Enter Book Price: " << endl;
+		cout << "Enter Book Price: ";
 		cin >> book_price;
 	}
 
@@ -63,7 +59,7 @@ public:
 		file2.open("test1.dat", ios::in | ios::binary);
 		if (!file2)
 		{
-			cout << "File does not exists!!" << endl;
+			cout << "File does not exist!!" << endl;
 		}
 		else
 		{
@@ -71,10 +67,8 @@ public:
 			while (!file2.eof())
 			{
 				printDetails();
-
 				file2.read((char *)this, sizeof(*this));
 			}
-
 			file2.close();
 		}
 	}
@@ -86,14 +80,14 @@ public:
 		file2.open("test1.dat", ios::in | ios::binary);
 		if (!file2)
 		{
-			cout << "File does not exists!!" << endl;
+			cout << "File does not exist!!" << endl;
 		}
 		else
 		{
 			file2.read((char *)this, sizeof(*this));
 			while (!file2.eof())
 			{
-				if (!strcmp(s, (char *)this->book_name)) // returns 0
+				if (!strcmp(s, (char *)this->book_name))
 				{
 					printDetails();
 					flag = true;
@@ -102,7 +96,7 @@ public:
 			}
 			if (flag == false)
 			{
-				cout << "Record does not exists!!" << endl;
+				cout << "Record does not exist!!" << endl;
 			}
 			file2.close();
 		}
@@ -118,26 +112,23 @@ public:
 		file2.open("test1.dat", ios::in | ios::binary);
 		if (!file2)
 		{
-			cout << "File does not exists!!" << endl;
+			cout << "File does not exist!!" << endl;
 		}
 		else
 		{
-			//	_getch();
 			o.open("tempfile.dat", ios::out | ios::binary);
 			file2.read((char *)this, sizeof(*this));
 			while (!file2.eof())
 			{
-				if ((strcmp(s, book_name) != 0)) // returns 0 if matches
+				if ((strcmp(s, book_name) != 0))
 				{
-					o.write((char *)this, sizeof(*this)); // write in file
+					o.write((char *)this, sizeof(*this));
 				}
-				file2.read((char *)this, sizeof(*this)); // again read the record
+				file2.read((char *)this, sizeof(*this));
 			}
-
 			file2.close();
 			o.close();
 			remove(ff.c_str());
-			//_getch();
 			rename(tmp.c_str(), ff.c_str());
 		}
 	}
@@ -152,33 +143,30 @@ public:
 		file2.open("test1.dat", ios::in | ios::binary);
 		if (!file2)
 		{
-			cout << "File does not exists!!" << endl;
+			cout << "File does not exist!!" << endl;
 		}
 		else
 		{
-			//	_getch();
 			o.open("tempfile.dat", ios::out | ios::binary);
 			file2.read((char *)this, sizeof(*this));
 			while (!file2.eof())
 			{
-				if ((strcmp(s, book_name) != 0)) // returns 0 if matches
+				if ((strcmp(s, book_name) != 0))
 				{
-					o.write((char *)this, sizeof(*this)); // write in file
+					o.write((char *)this, sizeof(*this));
 				}
 				else if (strcmp(s, book_name) == 0)
 				{
 					Book b;
 					b.inputData();
-					o.write((char *)&b, sizeof(b)); // write in file
+					o.write((char *)&b, sizeof(b));
 				}
-
-				file2.read((char *)this, sizeof(*this)); // again read the record
+				file2.read((char *)this, sizeof(*this));
 			}
 
 			file2.close();
 			o.close();
 			remove(ff.c_str());
-			//_getch();
 			rename(tmp.c_str(), ff.c_str());
 		}
 	}
@@ -192,14 +180,12 @@ public:
 	{
 		int choice;
 		cout << "\nBOOK MANAGEMENT SYSTEM!";
-
 		cout << "\n1. Insert Book Record";
 		cout << "\n2. View Book Record";
 		cout << "\n3. Search Book Record";
 		cout << "\n4. Delete Book Record";
 		cout << "\n5. Update Book Record";
 		cout << "\n6. Exit";
-
 		cout << "\n\nEnter your choice:";
 		cin >> choice;
 		return choice;
@@ -208,18 +194,12 @@ public:
 
 int main()
 {
-	int b_id;
-	string b_name;
-	float b_price;
-	char bname[25];
-
 	Book b1;
-
 	char bn[25];
 	bool flag = true;
+
 	while (flag)
 	{
-		//	system("cls");
 		switch (b1.menu())
 		{
 		case 1:
@@ -230,20 +210,14 @@ int main()
 		case 2:
 			b1.readAllData();
 			break;
-
 		case 3:
-
 			cout << "\n\nEnter the book title to search:";
-
 			cin.ignore();
 			cin.getline(bn, 24);
 			b1.searchData(bn);
 			break;
-
 		case 4:
-
 			cout << "\n\nEnter the book title to delete:";
-
 			cin.ignore();
 			cin.getline(bn, 24);
 			b1.readAllData();
@@ -251,22 +225,17 @@ int main()
 			cout << "\n\nRecord Deleted!";
 			b1.readAllData();
 			break;
-
 		case 5:
-
 			cout << "\n\nEnter the book title to update:";
-
 			cin.ignore();
 			cin.getline(bn, 24);
 			b1.updateData(bn);
 			cout << "\n\nRecord Updated!";
 			break;
-
 		case 6:
 			cout << "\n\nTHANK YOU!!";
 			flag = false;
 			break;
-
 		default:
 			cout << "\n\nInvalid choice!!!!";
 			break;

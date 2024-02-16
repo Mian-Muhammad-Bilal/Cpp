@@ -8,13 +8,13 @@ Throughout my journey, I've learned fundamental concepts and advanced topics, in
 - Object-Oriented Programming
 - Data Structures and Algorithms
 
-## Programming Fundamentals:
+### Programming Fundamentals:
 - This repository on Programming Fundamentals (PF) covers basic topics in C++, including practice exercises, operations, arrays, loops, functions, exams, and a notable project—the Car Parking Management system. It delves into the foundational aspects of C++ from the first semester, offering a robust base for continued exploration and learning.
 
-## Object-Oriented Programming
+### Object-Oriented Programming
 - This repository comprehensively covers Object-Oriented Programming (OOP) topics, including classes, objects, inheritance, polymorphism, encapsulation, abstraction, constructors, destructors, and operator overloading. It encompasses a variety of hands-on exercises, assignments, and practical applications to reinforce and apply these OOP principles.
 
-## Data Structures and Algorithms
+### Data Structures and Algorithms
 - This repository includes Data Structures and Algorithms (DSA) topics, featuring arrays, linked lists, stacks, queues, trees, sorting algorithms like merge and insertion, searching techniques, the Tower of Hanoi, and more. It incorporates a diverse range of content, including assignments, lab tasks, practice exercises, and exam quizzes. Dive into this repository to explore and deepen your understanding of fundamental DSA concepts through hands-on exercises and practical applications.
 
 ## Projects

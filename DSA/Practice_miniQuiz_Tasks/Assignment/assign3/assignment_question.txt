@@ -1,0 +1,51 @@
+Complete the following code according to the given
+description and run the code to check the complete
+working. Note: Your code should have no memory leaks.
+Always assign NULL to deleted memory.
+#include <iostream>
+using namespace std;
+class Node
+{
+public:
+int data;
+Node * next;
+Node(int data)
+{
+// Initialize using this
+}
+};
+class LinkedList
+{
+private:
+Node *head;
+class Node
+{
+public:
+int data;
+Node * next;
+Node(int data)
+{
+// Initialize here
+}
+};
+public:
+LinkedList(){
+head = NULL;
+}
+void InsertAtStart(int data)// Adds a node at the start of the list.
+void InsertAtEnd(int data)// Adds a node at the end of the list
+void Insert(int d1, int d2)//Add the node of data d2 after the node with data d1
+void DeleteAtEnd()// Delete a node at the end of the list
+void DeleteAtStart()// Delete a node at the start of the list.
+void Delete(int data) // Deletes a node with data
+int getSize() //returns the count of elements in the list
+bool IsEmpty() //Returns true if empty.
+bool Find (int find)//Returns true if found.
+void FindNReplace(int find, int data)//Find and replace all occurance.
+void Display() //Displays all the elements in list recursively.
+};
+int main()
+{
+return 0;
+}
+

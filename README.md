@@ -1,6 +1,3 @@
-# C++
-My C++ journey: From novice to proficient, capturing my growth with C++ as my first programming language.
-
 # My C++ Journey
 
 Welcome to my C++ journey repository! This space documents my progression in learning C++ programming, serving as a timeline of my projects and growth. C++ was my first programming language, and this repository reflects the journey of my skills from a novice to a more proficient developer.
